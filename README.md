@@ -1,4 +1,4 @@
-# MA4N1 Project
+# MA4N1_Platonic_Solids
 
 ## GitHub configuration
 
