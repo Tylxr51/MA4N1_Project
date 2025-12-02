@@ -28,10 +28,6 @@ theorem classify_mn : ({(m, n) : ℕ × ℕ | m > 2 ∧ n > 2 ∧ (m - 2) * (n -
   ext
   aesop
 
-/- Map the five pairs to their Platonic solid names. -/
-inductive SolidName | tetrahedron | cube | octahedron | dodecahedron | icosahedron
-deriving DecidableEq, Repr
-
 /- Defining a map from the pair (m,n) to its associated
 platonic solid, and return 'none' for other pairs -/
 def mn_solid : (ℕ × ℕ) → String
