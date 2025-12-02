@@ -9,7 +9,7 @@
 
 #### 26.11.25
 
--
+- Wrote first definition of a platonic solid (this will not be used in the final project, but was committed for completeness)
 
 
 #### 19.11.25
