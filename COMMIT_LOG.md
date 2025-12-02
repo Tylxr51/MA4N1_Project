@@ -5,7 +5,7 @@
 #### 02.12.25
 
 - Adding COMMIT_LOG and TODO list
-
+- Mapping a pair (m,n) to its associated platonic solid, and added a couple examples to check it worked as expected
 
 #### 26.11.25
 
