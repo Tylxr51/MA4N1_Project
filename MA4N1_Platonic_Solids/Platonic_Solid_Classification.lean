@@ -15,7 +15,7 @@ lemma shift_classify : {(m, n) : ℕ × ℕ | (m + 1) * (n + 1)< 4}
 /- Function to shift the set back to what we desire -/
 lemma shift : (· + (3,3)) '' {(m, n) : ℕ × ℕ | (m + 1) * (n + 1) < 4}
  = {(m, n) : ℕ × ℕ | m > 2 ∧ n > 2 ∧ (m - 2) * (n - 2) < 4} := by
-  ext
+  ext x
   aesop
   use fst - 3, snd - 3
   obtain _|_|_|fst := fst <;> try grind
@@ -28,22 +28,16 @@ theorem classify_mn : ({(m, n) : ℕ × ℕ | m > 2 ∧ n > 2 ∧ (m - 2) * (n -
   ext
   aesop
 
-/- Map the five pairs to their Platonic solid names. -/
-inductive SolidName | tetrahedron | cube | octahedron | dodecahedron | icosahedron
-deriving DecidableEq, Repr
-
 /- Defining a map from the pair (m,n) to its associated
-platonic solid and return 'none for other pairs -/
-def mn_solid : (ℕ × ℕ) → Option SolidName
-| (3, 3) => SolidName.tetrahedron
-| (3, 4) => SolidName.octahedron
-| (3, 5) => SolidName.icosahedron
-| (4, 3) => SolidName.cube
-| (5, 3) => SolidName.dodecahedron
-| _      => none
+platonic solid, and return 'none' for other pairs -/
+def mn_solid : (ℕ × ℕ) → String
+| (3, 3) => "Tetrahedron"
+| (3, 4) => "Octahedron"
+| (3, 5) => "Icosahedron"
+| (4, 3) => "Cube"
+| (5, 3) => "Dodecahedron"
+| _      => "None"
 
-/- Example to check definition works -/
-open SolidName
-#eval mn_solid (3, 4)
-/- Gives "some (SolidName.octahedron)", wonder
-if possible to remove "some" and "SolidName"? -/
+/- Examples to check definition works -/
+#eval mn_solid (3, 5)
+#eval mn_solid (6, 6)
