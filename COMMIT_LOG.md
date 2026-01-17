@@ -1,6 +1,8 @@
 # Commit Log
 
+#### 05.01.25
 
+- Wrote definitions for simple graphs and proved the base case for the induction for the handshake lemma. The definition for the edgeset is wrong so I will have to change this
 
 #### 02.12.25
 
