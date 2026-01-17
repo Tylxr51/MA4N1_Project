@@ -1,5 +1,9 @@
 # Commit Log
 
+#### 17/01/26
+
+- Proved a directed version of the handshaking lemma. Shouldn't be too hard to translate into the true undirected version
+
 #### 05.01.25
 
 - Wrote definitions for simple graphs and proved the base case for the induction for the handshake lemma. The definition for the edgeset is wrong so I will have to change this
